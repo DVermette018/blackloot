@@ -6,12 +6,17 @@ gem 'rails', '4.1.0'
 gem 'sqlite3', group: [:development, :test]
 # Use postgresql as the database for production
 
+#Declare version of ruby
 ruby '2.2.1'
+#font-awesome gem
+gem 'font-awesome-less'
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+
+#
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
