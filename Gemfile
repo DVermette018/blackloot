@@ -8,8 +8,6 @@ gem 'sqlite3', group: [:development, :test]
 
 #Declare version of ruby
 ruby '2.2.1'
-#font-awesome gem
-gem 'font-awesome-less'
 
 group :production do
   gem 'pg'
