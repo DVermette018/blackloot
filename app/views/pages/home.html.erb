@@ -256,10 +256,20 @@
                     </div>
                     <form id="signInForm" class="basic-form">
                         <div class="form-alert"></div>
-                        <div class="form-error alert alert-default">Opss... Please check the form :-)</div>
+                        <div class="form-error alert alert-default">Oops... Please fill the form correctly.</div>
                         <div class="row">
                             <div class="col-md-9">
                                 <div class="form-group">
+                                            
+                                    <%= form_for Reader.new do |f| %>
+                                    
+                                    <div class="form-control">
+                                    <%= f.text_field email, class: 'input-lg' %>
+                                    </div>
+                                    
+                                    
+                                    <% end %>
+                                    
                                     <input type="email" class="form-control input-lg" placeholder="E-mail address..." required>
                                 </div>
                             </div>
@@ -276,15 +286,15 @@
 
             <div class="row padding-v-70 v-center-items">
                 <div class="col-lg-4 col-sm-4 text-right">
-                    <h1>Do not hestiate to <strong>contact Us</strong>!</h1>
+                    <h1>Do not hesitate to <strong>contact Us</strong>!</h1>
                 </div>
                 <div class="col-lg-2 col-lg-push-1 col-sm-4 text-center">
                     <img class="img-circle animated" data-animation="zoomIn" src="assets/img/photos/business-avatar01.jpg" alt="" />
                 </div>
                 <div class="col-lg-4 col-sm-4 col-lg-push-2">
                     <address>
-                        E-mail:  <a href="#"><strong>hello@suelo.pl</strong></a><br>
-                        Phone:  <strong>+32 2232 32 32</strong>
+                        E-mail:  <a href="#"><strong>info@blackloot.com</strong></a><br>
+                        Phone:  <strong>+1 418 123-4567</strong>
                     </address>
                     <a href="#" class="btn btn-black btn-sm btn-filled" data-toggle="modal" data-target="#contactModal">Open contact form</a>
                 </div>
