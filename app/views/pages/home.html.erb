@@ -35,11 +35,11 @@
 
 <body>
 
-<!-- Page Loader -->
+<!-- Page Loader 
 <div id="page-loader" class="bg-white">
     <div class="loader"><div><span></span></div><div><span></span></div><div><span></span></div><div><span></span></div><div><span></span></div><div><span></span></div><div><span></span></div></div>
 </div>
-
+-->
 
 <!-- Header -->
 <header id="header" class="bg-white sticky-white">
@@ -47,7 +47,9 @@
     <div class="container">
 
         <!-- Logo -->
-        <a href="home.html.erb" class="logo logo-default bg-red dark"><span class="main"><strong>Black</strong>Loot</span><span class="hover"><strong>Black</strong>Loot</span></a>
+        <%= link_to root_path, class:'logo logo-default bg-red dark' do %>
+        <span class="main"><strong>Black</strong>Loot</span><span class="hover"><strong>Black</strong>Loot</span>
+        <% end %>
         <!-- Menu Trigger -->
         <a href="#" class="pull-right header-element hidden-lg" data-target="mobile-nav"><i class="ti-menu"></i></a>
         <!-- Sep -->
@@ -70,13 +72,19 @@
         <nav id="main-menu" class="pull-right visible-lg">
             <ul class="nav nav-main dropdown-dark pull-left">
                 <li>
-                    <a href="#home"><span>Subscribe</span><span>Subscribe</span></a>
+                   <%= link_to '#home' do %>
+                    <span>Loot Now !</span><span>Loot Now !</span>
+                    <% end %>
                 </li>
                 <li>
-                    <a href="#about"><span>How it works</span><span>How it works</span></a>
+                    <%= link_to '#about' do %>
+                    <span>How it works</span><span>How it works</span>
+                    <% end %>
                 </li>
                 <li>
-                    <a href="#contact"><span>Contact</span><span>Contact</span></a>
+                    <%= link_to '#contact' do %>
+                    <span>Contact us</span><span>Contact us</span>
+                    <% end %>
                 </li>
             </ul>
         </nav>
@@ -92,12 +100,12 @@
     <!-- Section - Home -->
     <section id="home" class="section fullheight bg-blue dark padding-v-130">
         
-        <div class="bg-image animated infinite zooming"><img src="assets/img/photos/business-bg01.jpg" alt=""></div>
+        <%= image_tag("open-treasure-chest-golds-jewelry_195.jpg",class:'bg-image animated infinite zooming') %>
 
         <div class="container v-center">
             <h1 class="text-lg margin-b-0">You found <strong>your best loot ever!</strong></h1>
             <h4 class="margin-b-40">Join us and start receiving what you really <strong>deserve!</strong></h4>
-            <span data-target="local-scroll"><a href="#about" class="btn btn-red btn-filled">About Us</a><a href="#contact" class="btn btn-link">Contact</a></span>
+            <span data-target="local-scroll"><a href="#about" class="btn btn-red btn-filled">Loot Now!</a><a href="#about" class="btn btn-link">Learn more</a></span>
         </div>
 
     </section>
@@ -114,10 +122,10 @@
                     <img class="margin-b-30" src="assets/img/photos/business-photo01.jpg" alt="">
                 </div>
                 <div class="col-lg-5 col-lg-push-1">
-                    <h1><strong>Business &amp; Economy</strong> is our passion.</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    <span data-target="local-scroll"><a href="#offer" class="btn btn-black btn-filled">Our Services</a></span>
+                    <h1><strong>Premium loot.</strong> For your pleasure only.</h1>
+                    <p class="lead">Blackloot is filled with epic gear every month, cautiously picked by our team, especially for you.</p>
+                    <p>All the best stuff you can only hope for, delivered at your door every month.</p>
+                    <span data-target="local-scroll"><a href="#offer" class="btn btn-black btn-filled">Subscribe</a></span>
                 </div>
             </div>
         </div>

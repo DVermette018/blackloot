@@ -11,9 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151024220338) do
+ActiveRecord::Schema.define(version: 20151101011703) do
 
   create_table "members", force: true do |t|
+  end
+
+  create_table "news_subscribers", force: true do |t|
+  end
+
+  create_table "readers", force: true do |t|
   end
 
   create_table "users", force: true do |t|
