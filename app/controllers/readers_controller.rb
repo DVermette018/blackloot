@@ -8,8 +8,6 @@ class ReadersController < ApplicationController
         @reader = Reader.new(reader_params)
         
         if @contact.save
-            email = params[:reader][:email]
-            
             
             flash[:success] = 'Thank you for registering.'
             redirect_to new_contact_path
@@ -19,9 +17,9 @@ class ReadersController < ApplicationController
         end
     end
         
-        private
-        
-        def reader_params
-            params.require(:reader).permit(:email)
-        end
+    private
+    
+    def reader_params
+        params.require(:reader).permit(:email)
+    end
 end

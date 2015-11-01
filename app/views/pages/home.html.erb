@@ -242,44 +242,46 @@
     <!-- Section - Default / End -->
 
     <!-- Section - Contact -->
-    <section id="contact" class="section section-bent bg-red dark">
+<section id="contact" class="section section-bent bg-red dark">
 
-        <div class="section-top bg-red"></div>
+<div class="section-top bg-red"></div>
 
-        <div class="container">
+<div class="container">
 
-            <div class="row margin-b-50">
-                <div class="col-lg-8 col-lg-push-2">
-                    <div class="text-center margin-b-30">
-                        <h1 class="margin-b-0"><strong>Sign up</strong> to our monthly newsletter</h1>
-                        <h5>Get awesome <strong>free stuff</strong> each first day of the month!</h5>
-                    </div>
-                    <form id="signInForm" class="basic-form">
-                        <div class="form-alert"></div>
-                        <div class="form-error alert alert-default">Oops... Please fill the form correctly.</div>
-                        <div class="row">
-                            <div class="col-md-9">
-                                <div class="form-group">
-                                            
-                                    <%= form_for Reader.new do |f| %>
-                                    
-                                    <div class="form-control">
-                                    <%= f.text_field email, class: 'input-lg' %>
-                                    </div>
-                                    
-                                    
-                                    <% end %>
-                                    
-                                    <input type="email" class="form-control input-lg" placeholder="E-mail address..." required>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <button class="btn btn-block btn-black btn-lg btn-filled">Sign In</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+    <div class="row margin-b-50">
+        <div class="col-lg-8 col-lg-push-2">
+            <div class="text-center margin-b-30">
+                <h1 class="margin-b-0"><strong>Sign up</strong> to our monthly newsletter</h1>
+                <h5>Get awesome <strong>free stuff</strong> each first day of the month!</h5>
             </div>
+            <form id="signInForm" class="basic-form">
+                <div class="form-alert"></div>
+                <div class="form-error alert alert-default">Oops... Please fill the form correctly.</div>
+                <div class="row">
+                    <div class="col-md-9">
+                                    
+                            <%= form_for @reader do |f| %>
+                            
+                            <div class="form-group">
+                            <%= f.text_field :email, class: 'form-control input-lg', placeholder: 'E-mail address...' %>
+                            </div>
+                            
+                        </div>
+                            
+                            <div class="col-md-3">
+                            <%= f.submit "Sign in", class: 'btn btn-block btn-black btn-lg btn-filled', id: 'sign-in-btn' %>
+                            </div>
+                            
+                            <% end %>
+                        
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
 
             <!-- Line -->
             <hr class="sep-line">
