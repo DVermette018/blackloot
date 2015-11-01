@@ -7,19 +7,30 @@ class ReadersController < ApplicationController
     def create
         @reader = Reader.new(reader_params)
         
-        if @contact.save
+        newEmail = params[:reader][:email]
+        
+        if Reader.exists?(email: newEmail)
             
-            flash[:success] = 'Thank you for registering.'
-            redirect_to new_contact_path
+            flash[:danger] = 'You are already registered.'
+            
+            
         else
-            flash[:danger] = 'Something wrong occured, please try again.'
-            redirect_to new_contact_path
+        
+            if @reader.save
+                
+                flash[:success] = 'Thank you for registering.'
+                
+            else
+                flash[:danger] = 'Something wrong occured, please try again.'
+                
+            end
         end
+    
     end
         
     private
     
-    def reader_params
-        params.require(:reader).permit(:email)
-    end
+        def reader_params
+            params.require(:reader).permit(:email)
+        end
 end

@@ -13,15 +13,14 @@
             </div>
             
             <%= form_for @reader, :remote => true do |f| %>
-            <form id="signInForm" class="basic-form">
+            <form class="basic-form">
                 
             
-                    <div class="form-alert form-error alert alert-default"><span>Oops... please fill the form.</span></div>
-                    <% flash.each do |key, value| %>
-                    <%= content_tag :div, value, class: "form-error alert alert-#{key}" %>
-                    <% end %>
+                    <div class="form-alert form-error alert alert-default" id="new-reader-fail">Oops... please fill the form.</div>
+                    <div class="form-alert form-error alert alert-default" id="new-reader-success">Thank you for registering.</div>
                     
-                    <div class="row">
+                    
+                    <div class="row" id="signInForm">
                       
                     <div class="col-md-9">
                             

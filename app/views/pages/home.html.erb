@@ -241,45 +241,7 @@
     </section>
     <!-- Section - Default / End -->
 
-    <!-- Section - Contact -->
-<section id="contact" class="section section-bent bg-red dark">
-
-<div class="section-top bg-red"></div>
-
-<div class="container">
-
-    <div class="row margin-b-50">
-        <div class="col-lg-8 col-lg-push-2">
-            <div class="text-center margin-b-30">
-                <h1 class="margin-b-0"><strong>Sign up</strong> to our monthly newsletter</h1>
-                <h5>Get awesome <strong>free stuff</strong> each first day of the month!</h5>
-            </div>
-            <form id="signInForm" class="basic-form">
-                <div class="form-alert"></div>
-                <div class="form-error alert alert-default">Oops... Please fill the form correctly.</div>
-                <div class="row">
-                    <div class="col-md-9">
-                                    
-                            <%= form_for @reader do |f| %>
-                            
-                            <div class="form-group">
-                            <%= f.text_field :email, class: 'form-control input-lg', placeholder: 'E-mail address...' %>
-                            </div>
-                            
-                        </div>
-                            
-                            <div class="col-md-3">
-                            <%= f.submit "Sign in", class: 'btn btn-block btn-black btn-lg btn-filled', id: 'sign-in-btn' %>
-                            </div>
-                            
-                            <% end %>
-                        
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
+    <%= render "newsletter" %>
 
 
 
@@ -298,12 +260,14 @@
                         E-mail:  <a href="#"><strong>info@blackloot.com</strong></a><br>
                         Phone:  <strong>+1 418 123-4567</strong>
                     </address>
-                    <a href="#" class="btn btn-black btn-sm btn-filled" data-toggle="modal" data-target="#contactModal">Open contact form</a>
+                    
+                    <a href="#" class="btn btn-black btn-sm btn-filled" data-toggle="modal" data-target="#demoModal">Open contact form</a>
+                
                 </div>
             </div>
 
 
-        </div>
+        
 
         <footer class="border-top padding-v-30 relative">
             <div class="container">
@@ -345,33 +309,17 @@
 </nav>
 
 <!-- Modal - Contact Form -->
-<div class="modal fade" id="contactModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal" role="document">
-    <div class="modal-content bg-red dark">
+<!-- Modal - Demo -->
+<div class="modal fade modal-blue-dark" id="demoModal" tabindex="-1" role="dialog">
+  <button type="button" class="modal-close x-close" data-dismiss="modal"><span class="sr-only">Close</span></button>
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-intro">
+        <h1 class="margin-b-60">Example introduction text for modal window!</h1>
+    </div>
+    <div class="modal-content">
       <button type="button" class="modal-close close" data-dismiss="modal"><i class="ti-close"></i></button>
       <div class="modal-body">
-        <div class="row">
-            <div class="col-sm-8">
-                <h2>Please fill the <strong>form</strong> - I will response as fast as I can!</h2>
-            </div>
-        </div>
-        <form id="contact-form">
-            <div class="form-alert"></div>
-            <div class="form-error alert alert-default"><ul></ul></div>
-            <div class="form-group">
-                <label>Name:</label>
-                <input id="name" class="form-control" type="text" name="name">
-            </div>
-            <div class="form-group">
-                <label>Addres e-mail:</label>
-                <input id="email" class="form-control" type="text" name="email">
-            </div>
-            <div class="form-group">
-                <label>Message:</label>
-                <textarea id="message" class="form-control" name="message" rows="4"></textarea>
-            </div>
-            <button type="submit" class="btn btn-black btn-filled">Send a message!</button>
-        </form>
+        ....
       </div>
     </div>
   </div>

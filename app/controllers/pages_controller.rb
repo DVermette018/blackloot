@@ -1,8 +1,7 @@
 class PagesController < ApplicationController
     
     def home
-        @reader = Reader.create
-    
+        @reader = Reader.new
     end
     
 end
