@@ -18,7 +18,30 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.datetime :last_sign_in_at
       t.string   :current_sign_in_ip
       t.string   :last_sign_in_ip
-
+      
+      #Added parts for blackloot users
+      t.string :fname
+      t.string :lname
+      t.string :shirtType
+      t.integer :shirtSize
+      
+      t.string :shippingAddress
+      t.string :shippingDoor
+      t.string :shippingCity
+      t.string :shippingState
+      t.string :shippingCountry
+      t.string :shippingZip
+      
+      t.string :billingAddress
+      t.string :billingDoor
+      t.string :billingCity
+      t.string :billingState
+      t.string :billingCountry
+      t.string :billingZip
+      
+      
+      
+      
       ## Confirmable
       # t.string   :confirmation_token
       # t.datetime :confirmed_at
