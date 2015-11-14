@@ -12,15 +12,15 @@ $(document).ready(function(){
         
             var email = $('#reader_email').val();
         
-            if ( isEmail(email) ){
-                $('#signInForm').slideUp( 200 )
-                $("#new-reader-success").slideDown( 200 );
-            }
-            
-            else {
+                if ( isEmail(email) ){
+                    $('#signInForm').slideUp( 200 )
+                    $("#new-reader-success").slideDown( 200 );
+                }
                 
-                ("#new-reader-fail").slideDown( 200 ).delay( 2000 ).slideUp( 200 );
-            }
+                else {
+                    
+                    $("#new-reader-fail").slideDown( 200 ).delay( 2000 ).slideUp( 200 );
+                }
         
         }
         

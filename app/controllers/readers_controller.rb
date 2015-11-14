@@ -9,6 +9,7 @@ class ReadersController < ApplicationController
         
         newEmail = params[:reader][:email]
         
+        
         if Reader.exists?(email: newEmail)
             
             flash[:danger] = 'You are already registered.'
