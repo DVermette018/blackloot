@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'pages#home'
-  devise_for :users
   resources:readers
   
   # Example of regular route:
