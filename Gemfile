@@ -9,6 +9,9 @@ gem 'sqlite3', group: [:development, :test]
 #Declare version of ruby
 ruby '2.2.1'
 
+#Hash encryption gem
+gem 'bcrypt', '3.1.7'
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
