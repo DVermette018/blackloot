@@ -1,0 +1,33 @@
+<%= form_for @user do |f| %>
+    <form class="basic-form">
+                
+            
+                    <div class="form-alert form-error alert alert-default" id="new-reader-fail">Oops... please fill the form correctly.</div>
+                    <div class="form-alert form-error alert alert-default" id="new-reader-success">Thank you for registering.</div>
+                    
+                    
+                    <div class="row" id="signInForm">
+                      
+                    <div class="col-md-3">
+                            
+                        <div class="form-group" id="customer-details">
+                            <%= f.text_field :first_name, class: 'form-control input-lg', placeholder: 'First name' %>
+                        </div>
+                        
+                        <div class="form-group">
+                        <%= f.text_field :last_name, class: 'form-control input-lg', placeholder: 'Last name' %>
+                        </div>
+                    </div>
+                    <div class="col-md-3 input-group date">
+                        <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                    </div>
+                        
+                    <div class="col-md-3">
+                        <%= f.submit "Sign in", class: 'btn btn-block btn-black btn-lg btn-filled', id: 'sign-in-btn' %>
+                    </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </form>
+<% end %>
